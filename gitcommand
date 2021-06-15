@@ -1,0 +1,15 @@
+#git check
+git log --online 
+git status -v
+git remote -v (check repo remote)
+#push on github
+git init 
+git add .
+git remote name_remote ssh_repo_name
+git push remote_name branch
+fix loi repo_remote modifie ( git pull gitlab1 master --allow-unrelated-histories )
+
+
+---------------------------------
+account github: keyadmin
+account gitlab: keyadmingitlab

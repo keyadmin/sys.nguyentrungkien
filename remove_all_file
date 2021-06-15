@@ -1,0 +1,16 @@
+#apt-get purge mysql-apt-config
+#dpkg --remove mysql-apt-config_*
+
+2) apt-get remove mysql\*
+3) apt-get purge mysql\*
+1) dpkg -l | grep -i mysql
+
+apt-get autoremove
+apt-get autoclean
+
+----------------------------------------
+search all file : find . -print | grep -i foo
+
+remove character '/' : sed 's/\///g' id_rsa.pub
+
+

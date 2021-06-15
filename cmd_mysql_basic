@@ -1,0 +1,23 @@
+MYSQL_BASIC:
+create_user: CREATE USER 'kiennt1'@'localhost' IDENTIFIED BY 'password';
+grants_user: +) select,insert,update,delete on eway.* to kiennt2; (user_remote)
+             +) GRANT ALL PRIVILEGES ON * . * TO 'kiennt1'@'localhost'; (user_local)
+             +) GRANT SELECT (col1), INSERT (col1,col2) ON DB.TABLE TO 'kiennt1'@'localhost';
+
+revoke_user: +) thay "revoke" và "from" cho câu lệnh grant
+show_grants_user: show grants for kiennt1@localhost; 
+check_info_user: SELECT CURRENT_USER(); ,show databases; , show tables; , describe NAME_TABLE.
+check_user_in_DB : desc mysql.user; , show grants for @USER;
+delete_user: drop user 'kiennt1'@'localhost';
+change_password_user : ALTER USER 'root'@'localhost' IDENTIFIED BY 'NewPassword';
+
+Learn about remote user vs local user of mysql: xem phần hạn chế đặc quyền.
+-------------------------------------------------------------------------------------
+SELECT table_name AS "Table",
+ROUND(((data_length + index_length) / 1024 / 1024), 2) AS "Size (MB)"
+FROM information_schema.TABLES
+WHERE table_schema = "database_name"
+ORDER BY (data_length + index_length) DESC;
+************** Thay database_name *************
+ ***** check size tables database mysql ******
+ link ref: https://www.a2hosting.com/kb/developer-corner/mysql/determining-the-size-of-mysql-databases-and-tables

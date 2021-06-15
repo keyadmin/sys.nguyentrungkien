@@ -1,0 +1,29 @@
+Task 1:+++++++++ WORKING NGINX ++++++++++
+https://www.nginx.com/resources/wiki/start/topics/examples/phpfcgi/
+https://nginx.org/en/docs/beginners_guide.html#fastcgi (parameter nginx-php-fpm)
+------------------------------------------------------------------------------------
+Task 2:+++++++++ WORKING MYSQL SERVER ++++++++++
+ https://mysqlserverteam.com/mysql-8-0-persisting-configuration-variables/  |{variable in mysql}
+ https://dev.mysql.com/doc/refman/8.0/en/getting-information.html         |{command mysql basic}
+ https://dev.mysql.com/doc/refman/8.0/en/server-configuration.html     |{mysql for adminstrator}
+ https://dev.mysql.com/doc/refman/8.0/en/connection-access.html        |{syntax logic }
+ https://dev.mysql.com/doc/refman/8.0/en/partial-revokes.html          |{hạn chế đặc quyền}
+ https://www.sqlshack.com/how-to-backup-and-restore-mysql-databases-using-the-mysqldump-command/
+ {mysqldump backup and restore DB}
+ http://www.linuxhomenetworking.com/wiki/index.php/Quick_HOWTO_:_Ch34_:_Basic_MySQL_Configuration#.X635p3UzZH4            |{Tóm tắt mysql}
+ https://www.programmersought.com/article/2650154984/                  |{Tóm tắt mysql}
+------------------------------------------------------------------------------------ 
+ 
+
+ 
+###################################### 
+note:- hardlink , symblink
+- log format nginx 
+lets encrypt (domain that)
+create user 'kiennt1'@'localhost' identified by 'Eway@2020';
+create user 'kiennt2'@'' identified by 'Eway@2020';
+
+######################################
+unauto mount disk on taskbar ubuntu
+sudo gsettings set org.gnome.shell.extensions.dash-to-dock show-mounts false
+

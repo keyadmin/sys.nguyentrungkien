@@ -1,0 +1,11 @@
+mongod --dbpath /var/lib/mongo --logpath /var/log/mongodb/mongod.log --fork
+
+mongodump --collection=listingsAndReviews --db=sample_mongodb --out=/opt/backup/mongodb-21-04-2021.backup
+
+mongorestore --host localhost --port 27001 file .bson --drop  //--drop xóa dữ liệu cũ nạp dữ liệu mới.
+
+#mongo backup
+mongodump --db ${DB_NAME} --gzip -o ${BACKUP_FILE_GZ}
+
+mongorestore --gzip --archive=/path/to/file.gz
+

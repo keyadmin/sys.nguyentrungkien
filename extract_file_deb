@@ -1,0 +1,9 @@
+#Extract file .deb
+C1: Extract .deb package using ar command "ar vx {file.deb}"
+
+C2: use the dpkg-deb command to extract .deb "dpkg-deb -xv {file.deb} {/path/to/where/extract || .}"
+
+#view contents of a Debian package without extracting it.
+dpkg -c {file.deb} OR apt-file list {packageName}
+
+link refer: https://www.cyberciti.biz/faq/how-to-extract-a-deb-file-without-opening-it-on-debian-or-ubuntu-linux/

@@ -1,0 +1,20 @@
+cut -c 4-5 <<< 10-04-2021 // get 04
+cut -c-5 <<< 10-04-2021 // get 10-04
+
+date +%y // get year 
+date +'%Y-%m-%d'
+
+var=$(($a+$b)) // operator + 
+
+---------script list directory---------
+get_dir= ls $1
+for list in $get_dir
+do
+  echo $list
+done
+---------------------------------------
+
+sudo find /opt/backup/ -type f -mtime 0 -execdir rm -- '{}' \; //remove file 0 day
+link: https://askubuntu.com/questions/589210/removing-files-older-than-7-days
+
+
