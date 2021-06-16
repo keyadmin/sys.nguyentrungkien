@@ -8,3 +8,4 @@ in NAT to specify a destination IP address and port where incoming packets reque
 For example, if you wanted to forward incoming HTTP requests to your dedicated Apache HTTP Server server system at 172.31.0.23, run the following command:
 +) iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j DNAT --to 172.31.0.23:80
  PREROUTING:  Accept CHAIN NAT  external to Internal Network (config network external access to IP specific).
+link ref: https(:)//access.redhat.com/documentation/en-us/red_hat_enterprise_linux/4/html/security_guide/s1-firewall-ipt-fwd
