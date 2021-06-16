@@ -1,0 +1,10 @@
+IPTABLE NAT:
+To allow LAN nodes with private IP addresses to communicate with external public networks,
+configure the firewall for IP masquerading, which masks requests from LAN nodes with the IP address of the firewall's external device (in this case, eth0): 
++) iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+ POSTROUTING: Accept CHAIN NAT Internal Network to external Network. (Config network local nat to internet)
+If you have a server on your internal network that you want make available externally, you can use the -j DNAT target of the PREROUTING chain 
+in NAT to specify a destination IP address and port where incoming packets requesting a connection to your internal service can be forwarded. 
+For example, if you wanted to forward incoming HTTP requests to your dedicated Apache HTTP Server server system at 172.31.0.23, run the following command:
++) iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j DNAT --to 172.31.0.23:80
+ PREROUTING:  Accept CHAIN NAT  external to Internal Network (config network external access to IP specific).
